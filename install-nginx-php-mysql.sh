@@ -4,7 +4,7 @@
 # Install these things first. 
 # CentOS 6.latest 64 bit
 
-########## Prepare server for YUM ##########
+########## Prepare server  ##########
 rm -f /var/cache/yum/timedhosts.txt;
 yum clean all;
 
@@ -43,11 +43,13 @@ EOF
 
 ########### Create users and make correct groups ##########
 useradd jeff 
-useradd tr
-useradd sean
-useradd dani
-useradd fedit --home-dir=/www;
-
+useradd tr --home-dir=/var/www;
+useradd sean --home-dir=/var/www;
+useradd dani --home-dir=/var/www;
+useradd fedit --home-dir=/var/www;
+useradd guys that do the account management
+#useradd nginx
+########## Change usernames and remember to run secret script that changes ports and blocks root from ssh access #######
 
 ########## Install Nginx PHP MySql via YUM ##########
 # To remove run following command.
@@ -238,10 +240,6 @@ echo -e "\n\n\n";
 echo "====== FFMPEG INSTALLED: http://`hostname -i`:/ffmpeg/";
 echo -e "\n\n\n";
 
-########## Fast install command line ########## 
-# What's you need to do is: Copy and post/run below single command line via SSH root login. Wait 5-15 minutes(depending on the software download speed from your server), Everything is Done!
-
-# wget -O /tmp/install-nginx-php-mysql.sh https://raw.github.com/ComfortVPS/Nginx-PHP-MySql-phpMyAdmin/master/install-nginx-php-mysql.sh; sh /tmp/install-nginx-php-mysql.sh;
 
 
 
