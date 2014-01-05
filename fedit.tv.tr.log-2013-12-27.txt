@@ -1,9 +1,0 @@
-Monday 3 hours working with C programming on Kernel for Streaming. 
-
-
-
-2 hours Saturday with Sky and Dani. Contracts, Checks, Plan Time Frame.
-4 hours Saturday. reinstalled Centos - with custom Kernal with NGINX, PHP, PHP FPM since it will be fastest to run current site with PHP 
-2 hours hash bucket size problem. Changing to 64... Testing.... 
-
- 
