@@ -1,8 +1,7 @@
 #!/bin/sh
-# Script for Fedit.TV to automatically install Nginx + PHP(php-fpm) + MySql + phpMyAdmin
+# Script for Fedit.TV to automatically install Server requirements. 
 # 
-# Install these things first. 
-# CentOS 6.latest 64 bit
+# BEFORE RUNNING THIS SCRIPT MAKE SURE YOU INSTALL CentOS 6.latest 64 bit
 
 ########## Prepare server  ##########
 rm -f /var/cache/yum/timedhosts.txt;
@@ -31,6 +30,12 @@ else
 	fi
 fi
 
+# Add the repo for epel
+
+# Add the repo for 
+
+# Add the repo for 
+
 # Add the repo for NginX
 
 cat > /etc/yum.repos.d/nginx.repo<<EOF
@@ -42,13 +47,13 @@ enabled=1
 EOF
 
 ########### Create users and make correct groups ##########
-useradd jeff 
+useradd jeff --home-dir=/var/www;
 useradd tr --home-dir=/var/www;
 useradd sean --home-dir=/var/www;
 useradd dani --home-dir=/var/www;
 useradd fedit --home-dir=/var/www;
-useradd guys that do the account management
-#useradd nginx
+#useradd guys that do the account management
+#useradd nginx # Is this needed?
 ########## Change usernames and remember to run secret script that changes ports and blocks root from ssh access #######
 
 ########## Install Nginx PHP MySql via YUM ##########
